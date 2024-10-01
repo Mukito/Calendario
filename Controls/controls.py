@@ -17,6 +17,7 @@ class Calendario(ft.Container):
         super().__init__()
         self.width = 250
         self.height = 340
+        #   Cor do Calendario
         self.bgcolor = ft.colors.WHITE
         self.border_radius = 8
         self.shadow = ft.BoxShadow(
@@ -129,7 +130,7 @@ class Calendario(ft.Container):
         else:
             for i in range(42):
                 self.content.controls[2].controls[i].bgcolor = ft.colors.TRANSPARENT
-                self.content.controls[2].controls[i].content.color = ft.colors.GREEN
+                self.content.controls[2].controls[i].content.color = ft.colors.GREEN                    #GREEN
 
         try:
             self.page.update()
@@ -204,7 +205,7 @@ class DateSetField(ft.Dropdown):
         self.border = ft.InputBorder.NONE
         self.options = options
         self.value = value
-        self.color = ft.colors.GREEN
+        self.color = ft.colors.BLACK                    # GREEN
         self.text_style = ft.TextStyle(
             weight='bold', 
             size=14
@@ -223,7 +224,7 @@ class Buttons(ft.Container):
         self.border_radius = 30
         self.content = ft.Icon(
             name=icon,
-            color=ft.colors.GREEN,
+            color=ft.colors.GREEN,                          #GREEN
             size=18
         )
         self.alignment = ft.alignment.center
@@ -240,12 +241,12 @@ class DateShowDays(ft.Container):
         self.border_radius = 2
         self.border = ft.border.all(
             width=1,
-            color=ft.colors.GREEN
+            color=ft.colors.GREEN              # GREEN   Numeros
         )
 
         self.content = ft.Text(
             value=value,
-            color=ft.colors.GREEN,
+            color=ft.colors.GREEN,                 # GREEN   Semana
             size=14,
             weight='bold',
             text_align=ft.TextAlign.CENTER
